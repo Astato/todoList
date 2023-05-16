@@ -1,0 +1,121 @@
+$main-color: #4e8098;
+$light-gray: #EBF6FF;
+$secondary-color: #d6edff;
+
+#editor-container{
+  display: none;
+  grid-area: button;
+  flex-direction: column;
+  // gap: 30px;
+  animation: 400ms forwards;
+  animation-name: editor;
+  opacity: 0;
+  border-radius: 60px;
+  background-color: $secondary-color;
+  height: 40rem;
+  width: 40rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 20px;
+  box-shadow: 0 0 9px 1px lightgray;
+
+  textarea{
+    width: 30rem;
+    height: 10rem;
+    resize: none;
+    border-radius: 20px;
+    text-indent: 10px;
+    font-size: 15px;
+
+  }
+  input{
+    background-color:white;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 2rem;
+  }
+  #editor-project-name{
+    margin: 1rem 0;
+  }
+  #editor-folder{
+    margin-bottom: 1rem;
+  }
+  label{
+    margin: 1rem 0;
+  }
+
+  #editor-folder{
+    #editor-folder>:nth-child(3){
+      margin: 0 2rem;
+    }
+    #editor-folder>:nth-child(1){
+      margin-right: 6px;
+    }
+  }
+  #select-folder{
+    width: auto;
+    font-size:18px;
+  }
+  #savebtn, #cancelbtn{
+    font-size: 18px;
+    margin: auto 1rem;
+    border-radius: 10px;
+    padding: .3rem .6rem;
+    // background-color: $main-color;
+    background-color: white;
+    box-shadow: 0 0 3px 3px white;
+    border: solid white;
+  }
+  #savebtn:hover, #cancelbtn:hover{
+    border-bottom: solid $main-color 2px;
+    box-shadow: 0 2px $main-color;
+    cursor: pointer;
+  }
+}
+
+
+  #new-project-welcome-btn{
+    @extend #editor-container;
+    display:flex;
+    animation-name: none;
+    opacity: 1;
+    flex-direction: row-reverse;
+    width: 10rem;
+    height: 3rem;
+    padding: 1rem;
+    // background-color: rgb(143, 241, 168);
+    border-radius: 24px;
+    box-shadow: 0 0 4px 2px lightgray;
+    img{
+      margin: 10px;
+      margin-left: -10px;
+    }
+    
+  }
+  #new-project-welcome-btn:hover{
+    box-shadow: 0 0 1px 0px lightgrey;
+    color: $main-color;
+    cursor: pointer;
+    img{
+      filter: invert(48%) sepia(30%) saturate(276%) hue-rotate(180deg) brightness(118%) contrast(119%);
+      width: 46px;
+    }
+  
+  }
+
+
+@keyframes editor {
+  25%{
+    opacity: .25;
+  }
+  50%{
+    opacity: .50;
+  }
+  75%{
+    opacity: .75;
+  }
+  100%{
+    opacity: 1;
+  }
+}
